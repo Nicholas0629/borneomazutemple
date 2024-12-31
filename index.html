@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妈祖庙网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="circle.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <header>
+        <h1>婆罗洲妈祖庙</h1>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="about.html">关于我们</a>
+            <a href="event.html">活动</a>
+            <a href="pray.html">祈祷时间</a>
+            <a href="location.html">位置</a>
+            <a href="experience.html">体验</a>
+            <a href="feedback.html" id="feedback-link">反馈</a>
+        </nav>
+        <div class="logo-container">
+            <img src="img/240109145816752997.svg" alt="Logo" id="logo">
+        </div>
+    </header>
+
+    <section id="slideshow">
+        <div class="slideshow-container">
+            <!-- Slider Section -->
+            <div class="slide-container">
+                <!-- Slide 1 -->
+                <div class="slide fade">
+                    <img src="img/drone1.jpg" alt="Mazu Event 1">
+                    <div class="overlay">
+                        <h2>Mazu Festival</h2>
+                        <button class="btn-video" onclick="showVideo('video/video1.mp4')">Watch Video</button>
+                        <button class="btn-ticket">More Info</button>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide fade">
+                    <img src="img/temple1.jpg" alt="Mazu Event 2">
+                    <div class="overlay">
+                        <h2>Mazu Prayer Ceremony</h2>
+                        <button class="btn-video" onclick="showVideo('video/video2.mp4')">Watch Video</button>
+                        <button class="btn-info">More Info</button>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide fade">
+                    <img src="img/temple6.jpg" alt="Mazu Event 3">
+                    <div class="overlay">
+                        <h2>Mazu Pilgrimage</h2>
+                        <button class="btn-video" onclick="showVideo('videos/mazu_pilgrimage.mp4')">Watch Video</button>
+                        <button class="btn-info">More Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <video id="localVideo" controls autoplay>
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="close-modal" onclick="closeVideo()">&times;</span>
+        </div>
+    </div>
+
+
+    <section id="gallery">
+        <div class="showtimes-header">
+            <h2>图片廊</h2>
+        </div>
+        <div class="gallery-grid">
+            <img src="img/temple2.jpg" alt="庙宇图片1">
+            <img src="img/temple3.jpg" alt="庙宇图片2">
+            <img src="img/temple4.jpg" alt="庙宇图片3">
+        </div>
+    </section>
+
+    <section id="event-container">
+        <h2>Upcoming Events at Mazu Temple</h2>
+        <div class="event-carousel">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="event-slides">
+                <!-- Event Cards -->
+                <div class="event-card">
+                    <img src="img/temple5.jpg" alt="Event 1">
+                    <div class="details">
+                        <h3>Mazu Festival</h3>
+                        <p>Category: Religious Ceremony</p>
+                        <p>Date: March 12, 2024</p>
+                        <!-- Direct link to the event page -->
+                        <a href="mazu-festival.html" class="btn-details">View Details</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="img/temple6.jpg" alt="Event 2">
+                    <div class="details">
+                        <h3>Mazu Prayer Ceremony</h3>
+                        <p>Category: Spiritual Gathering</p>    
+                        <p>Date: April 5, 2024</p>
+                        <!-- Direct link to the event page -->
+                        <a href="mazu-prayer-ceremony.html" class="btn-details">View Details</a>
+                    </div>
+                </div>
+                <!-- Add more event cards as needed -->
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+    
+    <div class="container">
+        <h1>安燈油香</h1>
+        <div class="offerings">
+          <section class="offering">
+            <div class="circle">點燈祈福</div>
+            <img src="oil-lamp.png" alt="Oil Lamp" class="icon">
+          </section>
+          <section class="offering">
+            <div class="circle">油香喜添</div>
+            <img src="oil-bottle.png" alt="Oil Bottle" class="icon">
+          </section>
+          <section class="offering">
+            <div class="circle">祈安燈籠</div>
+            <img src="lantern.png" alt="Lantern" class="icon">
+          </section>
+          <section class="offering">
+            <div class="circle">線上求籤</div>
+            <img src="stick-container.png" alt="Stick Container" class="icon">
+          </section>
+          <section class="offering">
+            <div class="circle">靈籤解籤</div>
+            <img src="fortune-sticks.png" alt="Fortune Sticks" class="icon">
+          </section>
+        </div>
+      </div>
+    
+
+      <section class="temple-section">
+        <div class="content">
+          <h2>北媽祖</h2>
+          <div class="sub-title">國家重要民俗</div>
+          <p>
+            活動...
+          </p>
+          <button class="learn-more">了解更多 ➤</button>
+        </div>
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/your-video-id" 
+            title="YouTube video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <section class="cards-section">
+        <div class="card-container left">
+          <div class="blue-bar"></div>
+          <div class="card-content">
+            <img src="left-image.jpg" alt="Left Card Image">
+            <h3>宮殿巡禮</h3>
+            <p>聖母殿（正殿）奉祝媽祖，置有「萬年香火燈」擔當此傳遞香火的重任...</p>
+            <div class="read-more">➤</div>
+          </div>
+        </div>
+        <div class="card-container right">
+          <div class="blue-bar"></div>
+          <div class="card-content">
+            <img src="right-image.jpg" alt="Right Card Image">
+            <h3>建廟沿革</h3>
+            <p>康熙三十三年（1694），佛教臨濟宗第三十四代禪師僧樸壁奉潯洲天后宮...</p>
+            <div class="read-more">➤</div>
+          </div>
+        </div>
+      </section>
+    
+     
+    <footer>
+        <p>版权所有 © 2024 婆罗洲妈祖庙. 保留所有权利.</p>
+        <div class="social-media">
+            <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="function.js"></script>
+    <script src="eventcontainer.js"></script>
+</body>
+</html>
